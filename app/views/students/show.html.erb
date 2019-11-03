@@ -1,0 +1,10 @@
+<h1><%= @student.name %></h1>
+
+<% if !@student.courses.empty? %>
+  <% @student.courses.each do |course| %>
+    <h3><%= course.name %></h3>
+    <p>Grade: <%= @student.grade_in(course) %></p>
+  <% end %>
+<% else %>
+  <p><%= @student.name %> is not currently enrolled in any courses.</p>
+<% end %>
