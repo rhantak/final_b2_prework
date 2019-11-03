@@ -1,0 +1,9 @@
+<h1><%= @course.name %></h1>
+
+<% if !@course.students.empty? %>
+  <% @course.students_by_grade.each do |student| %>
+    <p><%= "#{student.name}, Grade: #{student.grade_in(@course)}" %></p>
+  <% end %>
+<% else %>
+
+<% end %>
